@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Excel Sıralama Aracı</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; margin-top: 100px; background-color: #f4f4f9;">
+
+    <h1 style="color: #333;">Öğrenci Net Sıralama Sistemi</h1>
+    <p style="color: #666;">Lütfen sınav sonuçlarını içeren Excel dosyasını yükleyiniz.</p>
+
+    <div style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: inline-block;">
+        <form action="/yukle" method="post" enctype="multipart/form-data">
+            <input type="file" name="dosya" accept=".xlsx" required style="margin-bottom: 20px;"><br>
+            <button type="submit" style="padding: 12px 24px; background-color: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                Dosyayı İşle ve İndir
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>
