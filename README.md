@@ -1,19 +1,22 @@
-# Öğrenci Net Sıralama ve Analiz Sistemi (Excel Web Servisi)
+This project is a Spring Boot web application designed to process raw Excel files containing student exam results in a specific template (Ayşeabla Schools format). It cleans the data, ranks students based on their total net scores, and generates a streamlined, professional report.
 
-Bu proje, belirli bir şablondaki (Ayşeabla Okulları sınav formatı) öğrenci sınav sonuçlarını içeren ham Excel dosyalarını işleyerek, verileri temizleyen ve öğrencileri toplam netlerine göre sıralayıp yepyeni bir rapor halinde sunan bir **Spring Boot** web uygulamasıdır.
+🚀 Features
+Data Cleansing: Automatically detects and filters out invalid rows, such as class averages (e.g., "5A") or "Total Student" counts, ensuring they do not interfere with the ranking.
 
-## 🚀 Özellikler
+Detailed Subject Analysis: Specifically extracts net scores for Mathematics, Science, Turkish, Social Studies, Religious Culture (DKAB), and English from the raw data and dynamically maps them to the new report.
 
-* **Veri Temizleme (Data Cleansing):** Excel'deki sınıf ortalamaları ("5A") veya "Tüm Öğrenciler" gibi geçersiz (kirli) satırları algılar ve otomatik olarak filtreleyerek sıralamayı bozmalarını engeller.
-* **Detaylı Branş Analizi:** Ham veriler içinden sadece toplam neti değil; Matematik, Fen Bilimleri, Türkçe, Sosyal Bilgiler, DKAB ve İngilizce netlerini de ayrıştırarak yeni rapora dinamik olarak ekler.
-* **Akıllı Sıralama:** Öğrencileri toplam net puanlarına göre büyükten küçüğe doğru (descending) sıralar.
-* **Kullanıcı Dostu Web Arayüzü:** Karmaşık terminal komutlarına gerek kalmadan, web tarayıcısı üzerinden tek tıkla dosya yükleme ve anında indirme imkanı sunar.
-* **RAM Üzerinde İşlem (In-Memory Processing):** Yüklenen dosyalar sunucu diskine kaydedilmeden doğrudan bellek (RAM) üzerinde `byte[]` akışlarıyla işlenir, bu sayede yüksek performans ve güvenlik sağlanır.
+Smart Ranking: Sorts students in descending order based on their total net points.
 
-## 🛠️ Kullanılan Teknolojiler
+User-Friendly Web Interface: Offers a seamless file upload and instant download experience through a browser, eliminating the need for complex terminal commands.
 
-* **Backend:** Java 21, Spring Boot
-* **Veri İşleme:** Apache POI (OOXML)
-* **Frontend:** HTML5, CSS3 
-* **Bağımlılık Yönetimi / Paketleme:** Maven
+In-Memory Processing: Uploaded files are processed directly in memory (RAM) via byte[] streams without being saved to the server's disk, ensuring high performance and data security.
+
+🛠️ Tech Stack
+Backend: Java 21, Spring Boot
+
+Data Processing: Apache POI (OOXML)
+
+Frontend: HTML5, CSS3
+
+Dependency Management & Build: Maven
 
